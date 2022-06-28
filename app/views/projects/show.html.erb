@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @project.name %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @project.category %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @project.description %>
+</p>
+
+  <%= link_to 'Edit', edit_project_path(@project) %> |
+  <%= link_to "Delete", @project, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %> |
+  <%= link_to 'Back', projects_path %>
